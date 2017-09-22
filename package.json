@@ -7,8 +7,8 @@
   "author": "islishude",
   "license": "MIT",
   "devDependencies": {
-    "@types/webpack": "^3.0.11",
     "ts-loader": "^2.3.7",
+    "typescript": "^2.5.2",
     "webpack": "^3.6.0"
   }
 }
