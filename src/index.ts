@@ -13,11 +13,16 @@ export default class Random {
      */
     getNum(min: number, max: number) {
         // if the params are not number,reports error
-        if (typeof min !== 'number' || typeof max !== 'number')
+        if (typeof min !== 'number' || typeof max !== 'number') {
             throw new Error('param invalidate,should be a number')
+        }
         // if the order is not incorrect,exchange param position
         if (min > max) {
             [min, max] = [max, min]
+        }
+        // if number is not in safe range,reports error
+        if (min < Number.MIN_SAFE_INTEGER || max > Number.MAX_SAFE_INTEGER) {
+            throw new Error('param should be in safe range')
         }
         // if min param is equal with max param,return min
         if (min === max) {
