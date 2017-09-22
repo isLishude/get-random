@@ -2,6 +2,7 @@
 
 ```js
 // ES6
+import {getNum, getStr} from '@islishude/get-random'
 import Random from '@islishude/get-random'
 // Node
 var Random = require('@islishude/get-random')
