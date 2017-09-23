@@ -4,7 +4,9 @@ var config = {
     entry: './src/index.ts',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].js'
+        filename: '[name].js',
+        library: 'get-random',
+        libraryTarget: 'umd'
     },
     module: {
         rules: [{

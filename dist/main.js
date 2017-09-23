@@ -1,4 +1,14 @@
-/******/ (function(modules) { // webpackBootstrap
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory();
+	else if(typeof define === 'function' && define.amd)
+		define([], factory);
+	else if(typeof exports === 'object')
+		exports["get-random"] = factory();
+	else
+		root["get-random"] = factory();
+})(this, function() {
+return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 /******/
@@ -65,17 +75,18 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (immutable) */ __webpack_exports__["getNum"] = getNum;
+/* harmony export (immutable) */ __webpack_exports__["getStr"] = getStr;
 /**
  * get a radom string or number of given range
  * @author islishude
  * @license MIT
  * @version 1.0.0
  */
-exports.__esModule = true;
 /**
  * get a number of given range
  * @param min {number} the min number
@@ -89,7 +100,7 @@ function getNum(min, max) {
     }
     // if the order is not incorrect,exchange param position
     if (min > max) {
-        _a = [max, min], min = _a[0], max = _a[1];
+        [min, max] = [max, min];
     }
     // if number is not in safe range,reports error
     if (min < Number.MIN_SAFE_INTEGER || max > Number.MAX_SAFE_INTEGER) {
@@ -100,29 +111,26 @@ function getNum(min, max) {
         return min;
     }
     return Math.floor(Math.random() * (max - min + 1)) + min;
-    var _a;
 }
-exports.getNum = getNum;
 /**
  * get a radom string
  * @param length {number} default is 6
  * @return <string> a radom string,default length is 6
  */
-function getStr(length) {
-    if (length === void 0) { length = 6; }
-    var str = 'abcdefghijklmnopqrstuvwxyz';
-    var _str = '';
+function getStr(length = 6) {
+    let str = 'abcdefghijklmnopqrstuvwxyz';
+    let _str = '';
     str += str.toUpperCase();
     str += '0123456789';
-    for (var i = 0; i < length; i++) {
-        var rand = Math.floor(Math.random() * str.length);
+    for (let i = 0; i < length; i++) {
+        let rand = Math.floor(Math.random() * str.length);
         _str += str[rand];
     }
     return _str;
 }
-exports.getStr = getStr;
 
 
 /***/ })
 /******/ ]);
+});
 //# sourceMappingURL=main.js.map
