@@ -1,5 +1,5 @@
 {
-  "name": "random-generator",
+  "name": "random-numorstr",
   "version": "0.0.1",
   "description": "a simply lib to get a radom string or number of given range",
   "main": "src/index.ts",
