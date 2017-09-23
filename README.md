@@ -13,5 +13,5 @@ Random.getNum(2,100)
 Random.getStr(6)
 ```
 
-## Lisence
+## license
 MIT
