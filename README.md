@@ -2,10 +2,10 @@
 
 ```js
 // ES6
-import {getNum, getStr} from '@islishude/get-random'
-import Random from '@islishude/get-random'
+import {getNum, getStr} from 'random-numorstr'
+import random-numorstr from 'random-numorstr'
 // Node
-var Random = require('@islishude/get-random')
+var Random = require('random-numorstr')
 
 // get random number of given range
 Random.getNum(2,100)

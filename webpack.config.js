@@ -5,7 +5,7 @@ var config = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].js',
-        library: 'get-random',
+        library: 'random-numorstr',
         libraryTarget: 'umd'
     },
     module: {
