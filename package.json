@@ -2,7 +2,7 @@
   "name": "random-numorstr",
   "version": "0.0.1",
   "description": "a simply lib to get a radom string or number of given range",
-  "main": "dist/main",
+  "main": "src/index",
   "repository": "https://github.com/isLishude/get-random.git",
   "author": "islishude",
   "license": "MIT",
