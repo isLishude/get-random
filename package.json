@@ -1,6 +1,6 @@
 {
   "name": "random-numorstr",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "a simply lib to get a radom string or number of given range",
   "main": "src/index",
   "repository": "https://github.com/isLishude/get-random.git",
