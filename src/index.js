@@ -4,7 +4,6 @@
  * @license MIT
  * @version 1.0.0
  */
-
 /**
  * get a number of given range
  * @param min {number} the min number
@@ -14,21 +13,21 @@
 export function getNum(min, max) {
     // if the params are not number,reports error
     if (typeof min !== 'number' || typeof max !== 'number') {
-        throw new Error('param invalidate,should be a number')
+        throw new Error('param invalidate,should be a number');
     }
     // if the order is not incorrect,exchange param position
     if (min > max) {
-        [min, max] = [max, min]
+        [min, max] = [max, min];
     }
     // if number is not in safe range,reports error
     if (min < Number.MIN_SAFE_INTEGER || max > Number.MAX_SAFE_INTEGER) {
-        throw new Error('param should be in safe range')
+        throw new Error('param should be in safe range');
     }
     // if min param is equal with max param,return min
     if (min === max) {
-        return min
+        return min;
     }
-    return Math.floor(Math.random() * (max - min + 1)) + min
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 /**
  * get a radom string
@@ -36,13 +35,13 @@ export function getNum(min, max) {
  * @return <string> a radom string,default length is 6
  */
 export function getStr(length = 6) {
-    let str = 'abcdefghijklmnopqrstuvwxyz'
-    let _str = ''
+    let str = 'abcdefghijklmnopqrstuvwxyz';
+    let _str = '';
     str += str.toUpperCase();
-    str += '0123456789'
+    str += '0123456789';
     for (let i = 0; i < length; i++) {
-        let rand = Math.floor(Math.random() * str.length)
+        let rand = Math.floor(Math.random() * str.length);
         _str += str[rand];
     }
-    return _str
+    return _str;
 }
