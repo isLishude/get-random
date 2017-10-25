@@ -1,5 +1,7 @@
 ## random-numorstr
-a simple lib useing ES6+ to get random number or string
+a simple lib using ES6+ to get random number or string
+
+If you using Nodejs,you should using webpack to complie code.
 
 ## Usage
 
