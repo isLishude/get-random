@@ -1,5 +1,6 @@
 ## random-numorstr
 a simple lib useing ES6+ to get random number or string
+
 ## Usage
 
 ```js
