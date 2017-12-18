@@ -11,6 +11,7 @@
   },
   "scripts": {
     "dist": "tsc",
-    "pub": "git push && git push --tags && npm publish"
+    "pub": "git push && git push --tags && npm publish",
+    "test": "node test.js"
   }
 }

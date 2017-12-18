@@ -1,6 +1,9 @@
 {
     "compilerOptions": {
         "sourceMap": false,
-        "target": "es2015"
+        "module": "umd",
+        "lib": [
+            "es2015"
+        ]
     }
 }
