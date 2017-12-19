@@ -8,12 +8,14 @@
   "author": "isLishude",
   "license": "MIT",
   "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1",
     "tslint": "^5.8.0",
     "typescript": "^2.5.3"
   },
   "scripts": {
     "build": "tsc && npm run test",
     "prepublishOnly": "git push && git push --tags",
-    "test": "node test.js"
+    "test": "mocha"
   }
 }
