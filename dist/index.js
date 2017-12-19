@@ -17,10 +17,10 @@
     exports.__esModule = true;
     function getNum(min, max) {
         if (typeof min !== "number" || typeof max !== "number") {
-            throw new Error("param invalidate,should be a number");
+            return 0;
         }
         if (min < Number.MIN_SAFE_INTEGER || max > Number.MAX_SAFE_INTEGER) {
-            throw new Error("param should be in safe range");
+            throw new TypeError("param should be in safe range");
         }
         if (min === max) {
             return min;
@@ -35,15 +35,15 @@
     exports.getNum = getNum;
     function getStr(length) {
         if (length === void 0) { length = 6; }
-        var str = "abcdefghijklmnopqrstuvwxyz";
-        var _str = "";
-        str += str.toUpperCase();
-        str += "0123456789";
+        var tmp = "abcdefghijklmnopqrstuvwxyz";
+        var str = "";
+        tmp += tmp.toUpperCase();
+        tmp += "0123456789";
         for (var i = 0; i < length; i++) {
-            var rand = Math.floor(Math.random() * str.length);
-            _str += str[rand];
+            var rand = Math.floor(Math.random() * tmp.length);
+            str += tmp[rand];
         }
-        return _str;
+        return str;
     }
     exports.getStr = getStr;
 });

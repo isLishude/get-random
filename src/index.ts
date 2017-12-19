@@ -2,7 +2,7 @@
  * get a random string or number of given range
  * @author isLishude
  * @license MIT
- * @version 1.2.2
+ * @version 1.2.3
  */
 
 /**
@@ -14,11 +14,11 @@
 export function getNum(min: number, max: number): number {
   // if the params are not number,reports error
   if (typeof min !== "number" || typeof max !== "number") {
-    throw new Error("param invalidate,should be a number");
+    return 0;
   }
   // if number is not in safe range,reports error
   if (min < Number.MIN_SAFE_INTEGER || max > Number.MAX_SAFE_INTEGER) {
-    throw new Error("param should be in safe range");
+    throw new TypeError("param should be in safe range");
   }
   // if min param is equal with max param,return min
   if (min === max) {
@@ -35,13 +35,13 @@ export function getNum(min: number, max: number): number {
  * @return {string} a random string,default length is 6
  */
 export function getStr(length: number = 6): string {
-  let str: string = "abcdefghijklmnopqrstuvwxyz";
-  let _str: string = "";
-  str += str.toUpperCase();
-  str += "0123456789";
+  let tmp: string = "abcdefghijklmnopqrstuvwxyz";
+  let str: string = "";
+  tmp += tmp.toUpperCase();
+  tmp += "0123456789";
   for (let i = 0; i < length; i++) {
-    const rand: number = Math.floor(Math.random() * str.length);
-    _str += str[rand];
+    const rand: number = Math.floor(Math.random() * tmp.length);
+    str += tmp[rand];
   }
-  return _str;
+  return str;
 }

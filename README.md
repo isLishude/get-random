@@ -12,8 +12,11 @@ var Random = require('random-numorstr')
 
 // get random number of given range
 Random.getNum(2,100)
+// if param is not number type always return 0
+Random.getNum("string","string")
 // get random string,default length is 6
 Random.getStr(6)
+
 ```
 
 ## license

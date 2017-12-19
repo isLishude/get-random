@@ -2,7 +2,7 @@
   "name": "random-numorstr",
   "version": "1.2.2",
   "description": "a simply lib to get a random string or number of given range",
-  "main": "src/index",
+  "main": "dist/index",
   "types": "types/index.d.ts",
   "repository": "https://github.com/isLishude/get-random.git",
   "author": "isLishude",

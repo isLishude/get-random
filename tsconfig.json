@@ -8,7 +8,8 @@
         "outDir": "dist",
         "declaration": true,
         "declarationDir": "types",
-        "removeComments": true
+        "removeComments": true,
+        "alwaysStrict": true
     },
     "include": [
         "src/**/*"
