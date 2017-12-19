@@ -1,17 +1,19 @@
 {
   "name": "random-numorstr",
   "version": "1.2.1",
-  "description": "a simply lib to get a radom string or number of given range",
+  "description": "a simply lib to get a random string or number of given range",
   "main": "src/index",
+  "types": "types/index.d.ts",
   "repository": "https://github.com/isLishude/get-random.git",
-  "author": "islishude",
+  "author": "isLishude",
   "license": "MIT",
   "devDependencies": {
+    "tslint": "^5.8.0",
     "typescript": "^2.5.3"
   },
   "scripts": {
-    "dist": "tsc",
-    "pub": "git push && git push --tags && npm publish",
+    "build": "tsc && npm run test",
+    "prepublish": "git push && git push --tags",
     "test": "node test.js"
   }
 }

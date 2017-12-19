@@ -4,6 +4,16 @@
         "module": "umd",
         "lib": [
             "es2015"
-        ]
-    }
+        ],
+        "outDir": "dist",
+        "declaration": true,
+        "declarationDir": "types",
+        "removeComments": true
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
 }
