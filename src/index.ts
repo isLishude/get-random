@@ -4,7 +4,7 @@
  * @license MIT
  * @version 1.2.4
  */
-// import { randomBytes } from "crypto";
+import { randomBytes } from "crypto";
 
 // get a number of given range
 export function getNum(min: number, max: number): number {
@@ -36,4 +36,11 @@ export function getStr(length: number = 6): string {
     str += tmp[rand];
   }
   return str;
+}
+
+// get safe random string
+// base64
+export function getSafeRandom(length: number = 16): string {
+  const buffer = randomBytes(16);
+  return buffer.toString("hex");
 }
