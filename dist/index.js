@@ -1,3 +1,9 @@
+/*!
+ * get a random string or number of given range
+ * @author isLishude
+ * @license MIT
+ * @version 1.3.0
+ */
 (function (factory) {
     if (typeof module === "object" && typeof module.exports === "object") {
         var v = factory(require, exports);

@@ -23,6 +23,7 @@ Random.getNum(2**53+1, 2**53+2)
 Random.getStr(6)
 
 // get safer random string, default length is 16
+// before v1.3.0 only support node.js
 Random.getSafer()
 ```
 

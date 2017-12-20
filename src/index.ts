@@ -2,8 +2,9 @@
  * get a random string or number of given range
  * @author isLishude
  * @license MIT
- * @version 1.2.4
+ * @version 1.3.0
  */
+
 import { randomBytes } from "crypto";
 
 // get a number of given range
