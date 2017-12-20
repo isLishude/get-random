@@ -2,7 +2,7 @@
  * get a random string or number of given range
  * @author isLishude
  * @license MIT
- * @version 1.2.2
+ * @version 1.2.3
  */
 (function (factory) {
     if (typeof module === "object" && typeof module.exports === "object") {
@@ -20,7 +20,7 @@
             return 0;
         }
         if (min < Number.MIN_SAFE_INTEGER || max > Number.MAX_SAFE_INTEGER) {
-            throw new TypeError("param should be in safe range");
+            return 0;
         }
         if (min === max) {
             return min;

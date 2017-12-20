@@ -14,8 +14,15 @@ describe("test getStr", function() {
 });
 
 describe("test getNum", function() {
-  it("if param is string throw error", function() {
-    expect(getNum("error", "error")).to.be.a("number").that.equal(0);
+  it("if param is string return 0", function() {
+    expect(getNum("error", "error"))
+      .to.be.a("number")
+      .that.equal(0);
+  });
+  it("if param is out of safe number range return 0", function() {
+    expect(getNum(0, 2 ** 53))
+      .to.be.a("number")
+      .that.equal(0);
   });
   it("get a number", function() {
     expect(getNum(2, 10)).to.be.a("number");
