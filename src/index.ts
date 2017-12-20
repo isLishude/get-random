@@ -39,8 +39,13 @@ export function getStr(length: number = 6): string {
 }
 
 // get safe random string
-// base64
-export function getSafeRandom(length: number = 16): string {
-  const buffer = randomBytes(16);
-  return buffer.toString("hex");
+export function getSafer(length: number = 16): string {
+  const buffer: string = randomBytes(length).toString("base64");
+  // get random replace letter
+  const replace: string = getStr(1);
+  // replace "+" "\" "="
+  const resolve: string = buffer.replace(/[\+\\=]/g, replace);
+  // shorten
+  const result: string = resolve.slice(0, length);
+  return result;
 }

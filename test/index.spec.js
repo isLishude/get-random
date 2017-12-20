@@ -1,4 +1,4 @@
-const { getStr, getNum } = require("../dist/index");
+const { getStr, getNum, getSafer } = require("../dist/index");
 const { expect } = require("chai");
 
 describe("test getStr", function() {
@@ -34,5 +34,19 @@ describe("test getNum", function() {
   it("param min > max ", function() {
     const num = getNum(10, 2);
     expect(num >= 2 && num <= 10).to.be.true;
+  });
+});
+
+describe("get safe string", function() {
+  it("get 16 letter", function() {
+    expect(getSafer())
+      .to.a("string")
+      .that.have.lengthOf(16);
+  });
+
+  it("get 8 string", function() {
+    expect(getSafer(8))
+      .to.a("string")
+      .that.have.lengthOf(8);
   });
 });

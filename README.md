@@ -5,7 +5,7 @@ a simple lib to get random number or string
 
 ```js
 // ES6
-import {getNum, getStr} from 'random-numorstr'
+import {getNum, getStr, getSafer} from 'random-numorstr'
 import * as Random from 'random-numorstr'
 // Node
 var Random = require('random-numorstr')
@@ -21,6 +21,9 @@ Random.getNum(2**53+1, 2**53+2)
 
 // get random string,default length is 6
 Random.getStr(6)
+
+// get safer random string, default length is 16
+Random.getSafer()
 ```
 
 ## license

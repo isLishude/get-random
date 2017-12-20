@@ -1,20 +1,15 @@
-/*!
- * get a random string or number of given range
- * @author isLishude
- * @license MIT
- * @version 1.2.3
- */
 (function (factory) {
     if (typeof module === "object" && typeof module.exports === "object") {
         var v = factory(require, exports);
         if (v !== undefined) module.exports = v;
     }
     else if (typeof define === "function" && define.amd) {
-        define(["require", "exports"], factory);
+        define(["require", "exports", "crypto"], factory);
     }
 })(function (require, exports) {
     "use strict";
     exports.__esModule = true;
+    var crypto_1 = require("crypto");
     function getNum(min, max) {
         if (typeof min !== "number" || typeof max !== "number") {
             return 0;
@@ -46,4 +41,13 @@
         return str;
     }
     exports.getStr = getStr;
+    function getSafer(length) {
+        if (length === void 0) { length = 16; }
+        var buffer = crypto_1.randomBytes(length).toString("base64");
+        var replace = getStr(1);
+        var resolve = buffer.replace(/[\+\\=]/g, replace);
+        var result = resolve.slice(0, length);
+        return result;
+    }
+    exports.getSafer = getSafer;
 });
