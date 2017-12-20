@@ -1,6 +1,6 @@
 {
   "name": "random-numorstr",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "a simply lib to get a random string or number of given range",
   "main": "dist/index",
   "types": "types/index.d.ts",
