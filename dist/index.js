@@ -36,22 +36,34 @@
     exports.getNum = getNum;
     function getStr(length) {
         if (length === void 0) { length = 6; }
-        var tmp = "abcdefghijklmnopqrstuvwxyz";
+        var tmp = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
         var str = "";
-        tmp += tmp.toUpperCase();
-        tmp += "0123456789";
-        for (var i = 0; i < length; i++) {
+        var i = 0;
+        while (i < length) {
             var rand = Math.floor(Math.random() * tmp.length);
             str += tmp[rand];
+            i++;
         }
         return str;
     }
     exports.getStr = getStr;
     function getSafer(length) {
         if (length === void 0) { length = 16; }
-        var buffer = crypto_1.randomBytes(length).toString("base64");
+        var isNode = typeof window !== "undefined" ? false : true;
+        var buffer;
+        if (!isNode) {
+            var random = window.crypto.getRandomValues(new Uint8Array(length));
+            var arr_1 = [];
+            random.forEach(function (x) {
+                arr_1.push(x);
+            });
+            buffer = window.btoa(String.fromCharCode.apply(null, arr_1));
+        }
+        else {
+            buffer = crypto_1.randomBytes(length).toString("base64");
+        }
         var replace = getStr(1);
-        var resolve = buffer.replace(/[\+\\=]/g, replace);
+        var resolve = buffer.replace(/[\+\/=]/g, replace);
         var result = resolve.slice(0, length);
         return result;
     }

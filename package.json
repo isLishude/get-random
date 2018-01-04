@@ -6,6 +6,10 @@
   "types": "types/index.d.ts",
   "repository": "https://github.com/isLishude/get-random.git",
   "author": "isLishude",
+  "files": [
+    "dist/index.js",
+    "types/index.d.ts"
+  ],
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^8.5.1",

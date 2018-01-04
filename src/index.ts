@@ -28,24 +28,35 @@ export function getNum(min: number, max: number): number {
 }
 // get a random string
 export function getStr(length: number = 6): string {
-  let tmp: string = "abcdefghijklmnopqrstuvwxyz";
+  const tmp: string = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
   let str: string = "";
-  tmp += tmp.toUpperCase();
-  tmp += "0123456789";
-  for (let i = 0; i < length; i++) {
+  let i = 0;
+  while (i < length) {
     const rand: number = Math.floor(Math.random() * tmp.length);
     str += tmp[rand];
+    i++;
   }
   return str;
 }
 
 // get safe random string
 export function getSafer(length: number = 16): string {
-  const buffer: string = randomBytes(length).toString("base64");
+  const isNode: boolean = typeof window !== "undefined" ? false : true;
+  let buffer: string;
+  if (!isNode) {
+    const random = window.crypto.getRandomValues(new Uint8Array(length));
+    const arr: number[] = [];
+    random.forEach((x: number) => {
+      arr.push(x);
+    });
+    buffer = window.btoa(String.fromCharCode.apply(null, arr));
+  } else {
+    buffer = randomBytes(length).toString("base64");
+  }
   // get random replace letter
   const replace: string = getStr(1);
-  // replace "+" "\" "="
-  const resolve: string = buffer.replace(/[\+\\=]/g, replace);
+  // replace "+" "/" "="
+  const resolve: string = buffer.replace(/[\+\/=]/g, replace);
   // shorten
   const result: string = resolve.slice(0, length);
   return result;
