@@ -1,5 +1,14 @@
-## getRandom [![Build Status](https://www.travis-ci.org/isLishude/get-random.svg?branch=master)](https://www.travis-ci.org/isLishude/get-random)
-a simple lib to get random number or string 
+<p align="center">GetRandom.js</p>
+
+<p align="center">
+    <a href="https://www.travis-ci.org/isLishude/get-random"><img src="https://www.travis-ci.org/isLishude/get-random.svg?branch=master"></a>
+    <a href="https://app.fossa.io/projects/git%2Bgithub.com%2FisLishude%2Fget-random?ref=badge_shield"><img src="https://app.fossa.io/api/projects/git%2Bgithub.com%2FisLishude%2Fget-random.svg?type=shield"></a>
+    <a href="https://www.npmjs.com/package/random-numorstr"><img src="https://img.shields.io/npm/v/random-numorstr.svg" alt="Version"></a>
+    <br/>
+</p>
+
+
+<p align="center">a simple lib to get random number or string</p>
 
 ## Usage
 
@@ -31,3 +40,5 @@ Random.getSafer()
 
 ## license
 MIT
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FisLishude%2Fget-random.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FisLishude%2Fget-random?ref=badge_large)

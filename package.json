@@ -8,7 +8,8 @@
   "author": "isLishude",
   "files": [
     "dist/index.js",
-    "types/index.d.ts"
+    "types/index.d.ts",
+    "README.md"
   ],
   "license": "MIT",
   "devDependencies": {

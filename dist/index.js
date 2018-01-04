@@ -53,11 +53,7 @@
         var buffer;
         if (!isNode) {
             var random = window.crypto.getRandomValues(new Uint8Array(length));
-            var arr_1 = [];
-            random.forEach(function (x) {
-                arr_1.push(x);
-            });
-            buffer = window.btoa(String.fromCharCode.apply(null, arr_1));
+            buffer = window.btoa(String.fromCharCode.apply(null, random));
         }
         else {
             buffer = crypto_1.randomBytes(length).toString("base64");

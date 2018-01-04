@@ -45,11 +45,8 @@ export function getSafer(length: number = 16): string {
   let buffer: string;
   if (!isNode) {
     const random = window.crypto.getRandomValues(new Uint8Array(length));
-    const arr: number[] = [];
-    random.forEach((x: number) => {
-      arr.push(x);
-    });
-    buffer = window.btoa(String.fromCharCode.apply(null, arr));
+    // base64 of browser
+    buffer = window.btoa(String.fromCharCode.apply(null, random));
   } else {
     buffer = randomBytes(length).toString("base64");
   }
