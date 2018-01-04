@@ -4,7 +4,7 @@
     <a href="https://www.travis-ci.org/isLishude/get-random"><img src="https://www.travis-ci.org/isLishude/get-random.svg?branch=master" alt="ci"></a>
     <a href="https://app.fossa.io/projects/git%2Bgithub.com%2FisLishude%2Fget-random?ref=badge_shield"><img src="https://app.fossa.io/api/projects/git%2Bgithub.com%2FisLishude%2Fget-random.svg?type=shield" alt="license"></a>
     <a href="https://www.npmjs.com/package/random-numorstr"><img src="https://img.shields.io/npm/v/random-numorstr.svg" alt="Version"></a>
-    <a href="https://github.com/isLishude/get-random/issues"><img src="https://img.shields.io/github/issues/islishude/random-numorstr.svg" alt="issues"></a>
+    <a href="https://github.com/isLishude/get-random/issues"><img src="https://img.shields.io/github/issues/islishude/get-random.svg" alt="issues"></a>
     <br/>
 </p>
 
