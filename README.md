@@ -36,6 +36,7 @@ Random.getStr(6)
 // get safer random string, default length is 16
 // v1.3.0 only supports node.js
 // after v1.3.0 supports ES6 browser(using TypedArray and window.crypto)
+// for better compatibility in favor of getStr()
 Random.getSafer()
 ```
 
