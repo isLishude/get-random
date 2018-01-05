@@ -2,7 +2,7 @@
  * get a random string or number of given range
  * @author isLishude
  * @license MIT
- * @version 1.3.0
+ * @version 1.3.1
  */
 (function (factory) {
     if (typeof module === "object" && typeof module.exports === "object") {

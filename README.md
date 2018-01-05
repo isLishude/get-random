@@ -9,7 +9,7 @@
 </p>
 
 
-<p align="center">a simple lib to get random number or string</p>
+<p align="center">a Nodejs lib to get random number or string</p>
 
 ## Usage
 

@@ -2,7 +2,7 @@
  * get a random string or number of given range
  * @author isLishude
  * @license MIT
- * @version 1.3.0
+ * @version 1.3.1
  */
 
 import { randomBytes } from "crypto";
@@ -26,6 +26,7 @@ export function getNum(min: number, max: number): number {
     return Math.floor(Math.random() * (min - max + 1)) + max;
   }
 }
+
 // get a random string
 export function getStr(length: number = 6): string {
   const tmp: string = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
@@ -39,7 +40,7 @@ export function getStr(length: number = 6): string {
   return str;
 }
 
-// get safe random string
+// get safer random string
 export function getSafer(length: number = 16): string {
   const isNode: boolean = typeof window !== "undefined" ? false : true;
   let buffer: string;
@@ -52,7 +53,7 @@ export function getSafer(length: number = 16): string {
   }
   // get random replace letter
   const replace: string = getStr(1);
-  // replace "+" "/" "="
+  // replace "+" "\" "="
   const resolve: string = buffer.replace(/[\+\/=]/g, replace);
   // shorten
   const result: string = resolve.slice(0, length);
