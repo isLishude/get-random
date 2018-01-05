@@ -2,7 +2,7 @@
  * get a random string or number of given range
  * @author isLishude
  * @license MIT
- * @version 1.3.1
+ * @version 1.3.2
  */
 (function (factory) {
     if (typeof module === "object" && typeof module.exports === "object") {
@@ -27,7 +27,7 @@
             return min;
         }
         else {
-            return Math.floor(Math.random() * (Math.abs(min - max) + 1)) + max;
+            return Math.floor(Math.random() * (Math.abs(max - min) + 1)) + Math.min(max, min);
         }
     }
     exports.getNum = getNum;

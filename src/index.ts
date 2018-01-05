@@ -21,7 +21,7 @@ export function getNum(min: number, max: number): number {
   if (min === max) {
     return min;
   } else {
-    return Math.floor(Math.random() * (Math.abs(min - max) + 1)) + max;
+    return Math.floor(Math.random() * (Math.abs(max - min) + 1)) + Math.min(max, min);
   }
 }
 
