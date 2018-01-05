@@ -1,24 +1,24 @@
-<h1 align="center">GetRandom.js</h1>
+<h1 align="center">random.ts</h1>
 
 <p align="center">
-    <a href="https://www.travis-ci.org/isLishude/random.js"><img src="https://www.travis-ci.org/isLishude/random.js.svg?branch=master" alt="ci"></a>
-    <a href="https://www.npmjs.com/package/random-numorstr"><img src="https://img.shields.io/npm/v/random-numorstr.svg" alt="Version"></a>
-    <a href="https://codecov.io/gh/isLishude/random.js"><img src="https://codecov.io/gh/isLishude/random.js/branch/master/graph/badge.svg" /></a>
-    <a href="https://github.com/isLishude/random.js/issues"><img src="https://img.shields.io/github/issues/islishude/random.js.svg" alt="issues"></a>
+    <a href="https://www.travis-ci.org/isLishude/random.ts"><img src="https://www.travis-ci.org/isLishude/random.ts.svg?branch=master" alt="ci"></a>
+    <a href="https://www.npmjs.com/package/random.ts"><img src="https://img.shields.io/npm/v/random.ts.svg" alt="Version"></a>
+    <a href="https://codecov.io/gh/isLishude/random.ts"><img src="https://codecov.io/gh/isLishude/random.ts/branch/master/graph/badge.svg" /></a>
+    <a href="https://github.com/isLishude/random.ts/issues"><img src="https://img.shields.io/github/issues/islishude/random.ts.svg" alt="issues"></a>
     <br/>
 </p>
 
 
-<p align="center">Get a random string or number of given range for Nodejs and browser</p>
+<p align="center">Get a random for Nodejs and browser by TypeScript</p>
 
 ## Usage
 
 ```js
 // ES6
-import { getNum, getStr, getSafer } from 'random-numorstr'
-import * as Random from 'random-numorstr'
+import { getNum, getStr, getSafer } from 'random.ts'
+import * as Random from 'random.ts'
 // Node
-var Random = require('random-numorstr')
+var Random = require('random.ts')
 
 // get random number of given range
 // this is equal with getNum(100, 2)

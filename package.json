@@ -1,16 +1,17 @@
 {
-  "name": "random.js",
+  "name": "random.ts",
   "version": "1.3.3",
   "description": "Get a random string or number of given range for Nodejs and browser",
   "main": "dist/index",
   "types": "types/index.d.ts",
-  "repository": "https://github.com/isLishude/random.js.git",
+  "repository": "https://github.com/isLishude/random.ts.git",
   "author": "isLishude",
   "license": "MIT",
   "keywords": [
     "random",
     "browser",
-    "nodejs"
+    "nodejs",
+    "typescript"
   ],
   "files": [
     "dist/index.js",
