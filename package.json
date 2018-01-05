@@ -4,7 +4,7 @@
   "description": "a simply lib to get a random string or number of given range",
   "main": "dist/index",
   "types": "types/index.d.ts",
-  "repository": "https://github.com/isLishude/get-random.git",
+  "repository": "https://github.com/isLishude/random.js.git",
   "author": "isLishude",
   "license": "MIT",
   "keywords": [
