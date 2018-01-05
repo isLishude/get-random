@@ -26,11 +26,8 @@
         if (min === max) {
             return min;
         }
-        else if (min < max) {
-            return Math.floor(Math.random() * (max - min + 1)) + min;
-        }
         else {
-            return Math.floor(Math.random() * (min - max + 1)) + max;
+            return Math.floor(Math.random() * (Math.abs(min - max) + 1)) + max;
         }
     }
     exports.getNum = getNum;

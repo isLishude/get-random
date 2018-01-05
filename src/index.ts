@@ -2,7 +2,7 @@
  * get a random string or number of given range
  * @author isLishude
  * @license MIT
- * @version 1.3.1
+ * @version 1.3.2
  */
 
 import { randomBytes } from "crypto";
@@ -20,10 +20,8 @@ export function getNum(min: number, max: number): number {
   // if min param is equal with max param,return min
   if (min === max) {
     return min;
-  } else if (min < max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
   } else {
-    return Math.floor(Math.random() * (min - max + 1)) + max;
+    return Math.floor(Math.random() * (Math.abs(min - max) + 1)) + max;
   }
 }
 
