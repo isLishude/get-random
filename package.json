@@ -8,7 +8,9 @@
   "author": "isLishude",
   "license": "MIT",
   "keywords": [
-    "random"
+    "random",
+    "browser",
+    "nodejs"
   ],
   "files": [
     "dist/index.js",
@@ -17,6 +19,8 @@
   "devDependencies": {
     "@types/node": "^8.5.1",
     "chai": "^4.1.2",
+    "codecov": "^3.0.0",
+    "istanbul": "^0.4.5",
     "mocha": "^4.0.1",
     "tslint": "^5.8.0",
     "typescript": "^2.5.3"
@@ -24,6 +28,7 @@
   "scripts": {
     "build": "tsc && npm run test",
     "prepublishOnly": "git push && git push --tags",
-    "test": "mocha"
+    "test": "istanbul cover ./node_modules/mocha/bin/_mocha -- -R spec",
+    "cov": "codecov --token=$CODECOV_TOKEN"
   }
 }

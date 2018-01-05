@@ -3,9 +3,10 @@ node_js:
   - "8"
   - "9"
 install:
-  - npm install mocha chai -D
+  - npm i -D mocha chai codecov istanbul
 script:
   - npm test
+  - npm run cov
 notifications:
   email:
     on_success: change
