@@ -13,7 +13,7 @@ export function getNum(min: number, max: number): number {
   if (typeof min !== "number" || typeof max !== "number") {
     return 0;
   }
-  // if number is not in safe range,reports error
+  // if number is not in safe range return zero
   if (min < Number.MIN_SAFE_INTEGER || max > Number.MAX_SAFE_INTEGER) {
     return 0;
   }
