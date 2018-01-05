@@ -2,7 +2,6 @@
 
 <p align="center">
     <a href="https://www.travis-ci.org/isLishude/random.js"><img src="https://www.travis-ci.org/isLishude/random.js.svg?branch=master" alt="ci"></a>
-    <a href="https://app.fossa.io/projects/git%2Bgithub.com%2FisLishude%2Frandom.js?ref=badge_shield"><img src="https://app.fossa.io/api/projects/git%2Bgithub.com%2FisLishude%2Frandom.js.svg?type=shield" alt="license"></a>
     <a href="https://www.npmjs.com/package/random-numorstr"><img src="https://img.shields.io/npm/v/random-numorstr.svg" alt="Version"></a>
     <a href="https://codecov.io/gh/isLishude/random.js"><img src="https://codecov.io/gh/isLishude/random.js/branch/master/graph/badge.svg" /></a>
     <a href="https://github.com/isLishude/random.js/issues"><img src="https://img.shields.io/github/issues/islishude/random.js.svg" alt="issues"></a>
@@ -43,5 +42,3 @@ Random.getSafer()
 
 ## license
 MIT
-
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FisLishude%2Frandom.js.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FisLishude%2Frandom.js?ref=badge_large)

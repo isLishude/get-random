@@ -1,7 +1,7 @@
 {
-  "name": "random-numorstr",
+  "name": "random.js",
   "version": "1.3.3",
-  "description": "a simply lib to get a random string or number of given range",
+  "description": "Get a random string or number of given range for Nodejs and browser",
   "main": "dist/index",
   "types": "types/index.d.ts",
   "repository": "https://github.com/isLishude/random.js.git",
