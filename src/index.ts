@@ -2,7 +2,7 @@
  * get a random string or number of given range
  * @author isLishude
  * @license MIT
- * @version 2.0.0
+ * @version 2.0.1
  */
 
 import { randomBytes } from "crypto";
@@ -46,7 +46,7 @@ export function uuid(length: number = 21): string {
       ? window.crypto.getRandomValues(new Uint8Array(length))
       : randomBytes(length);
 
-  while (0 < length--) {
+  while (length--) {
     res += base64[random[length] & 0x3f];
   }
   return res;

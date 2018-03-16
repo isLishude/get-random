@@ -47,7 +47,7 @@
         var random = typeof window === "object"
             ? window.crypto.getRandomValues(new Uint8Array(length))
             : crypto_1.randomBytes(length);
-        while (0 < length--) {
+        while (length--) {
             res += base64[random[length] & 0x3f];
         }
         return res;

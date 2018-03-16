@@ -33,7 +33,7 @@ Random.number(0, 2 ** 53)
 Random.string(6)
 
 // get uuid string, default length is 21
-Random.uuid()
+Random.uuid(12)
 ```
 
 ## license

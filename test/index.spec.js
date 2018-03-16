@@ -35,6 +35,12 @@ describe("test number", function() {
     const num = number(10, 2);
     expect(num >= 2 && num <= 10).to.be.true;
   });
+  it("if min === max return min", function() {
+    const min = 100;
+    const max = 100;
+    const res = number(min, max);
+    expect(res === min).to.be.true;
+  });
 });
 
 describe("get uuid", function() {
@@ -48,5 +54,16 @@ describe("get uuid", function() {
     expect(uuid(8))
       .to.a("string")
       .that.have.lengthOf(8);
+  });
+
+  it("if in browser use getRandomValues", function() {
+    const window = {
+      crypto: {
+        getRandomValues: require("crypto").randomBytes
+      }
+    };
+    expect(uuid())
+      .to.a("string")
+      .that.have.lengthOf(21);
   });
 });
