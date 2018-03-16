@@ -1,6 +1,6 @@
 {
   "name": "random.ts",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Get a random string or number of given range for Nodejs and browser",
   "main": "dist/index",
   "types": "types/index.d.ts",
