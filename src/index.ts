@@ -2,10 +2,13 @@
  * get a random string or number of given range
  * @author isLishude
  * @license MIT
- * @version 1.3.3
+ * @version 1.4.0
  */
 
 import { randomBytes } from "crypto";
+
+const base64 =
+  "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 
 // get a number of given range
 export function getNum(min: number, max: number): number {
@@ -18,42 +21,33 @@ export function getNum(min: number, max: number): number {
     return 0;
   }
   // if min param is equal with max param,return min
-  if (min === max) {
-    return min;
-  } else {
-    return Math.floor(Math.random() * (Math.abs(max - min) + 1)) + Math.min(max, min);
-  }
+  return min === max
+    ? min
+    : Math.floor(Math.random() * (Math.abs(max - min) + 1)) +
+        Math.min(max, min);
 }
 
 // get a random string
 export function getStr(length: number = 6): string {
-  const tmp: string = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
   let str: string = "";
   let i = 0;
-  while (i < length) {
-    const rand: number = Math.floor(Math.random() * tmp.length);
-    str += tmp[rand];
-    i++;
+  while (i++ < length) {
+    const rand: number = Math.floor(Math.random() * base64.length);
+    str += base64[rand];
   }
   return str;
 }
 
 // get safer random string
 export function getSafer(length: number = 16): string {
-  const isNode: boolean = typeof window !== "undefined" ? false : true;
-  let buffer: string;
-  if (!isNode) {
-    const random = window.crypto.getRandomValues(new Uint8Array(length));
-    // base64 of browser
-    buffer = window.btoa(String.fromCharCode.apply(null, random));
-  } else {
-    buffer = randomBytes(length).toString("base64");
+  let result: string = "";
+  const random: Uint8Array =
+    typeof window !== "undefined"
+      ? window.crypto.getRandomValues(new Uint8Array(length))
+      : randomBytes(length);
+
+  while (0 < length--) {
+    result += base64[random[length] & 0x3f];
   }
-  // get random replace letter
-  const replace: string = getStr(1);
-  // replace "+" "\" "="
-  const resolve: string = buffer.replace(/[\+\/=]/g, replace);
-  // shorten
-  const result: string = resolve.slice(0, length);
   return result;
 }
