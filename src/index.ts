@@ -2,7 +2,7 @@
  * get a random string or number of given range
  * @author isLishude
  * @license MIT
- * @version 1.4.0
+ * @version 2.0.0
  */
 
 import { randomBytes } from "crypto";
@@ -11,7 +11,7 @@ const base64 =
   "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 
 // get a number of given range
-export function getNum(min: number, max: number): number {
+export function number(min: number, max: number): number {
   // if the params are not number return zero
   if (typeof min !== "number" || typeof max !== "number") {
     return 0;
@@ -28,26 +28,26 @@ export function getNum(min: number, max: number): number {
 }
 
 // get a random string
-export function getStr(length: number = 6): string {
-  let str: string = "";
+export function string(length: number = 6): string {
+  let res: string = "";
   let i = 0;
   while (i++ < length) {
     const rand: number = Math.floor(Math.random() * base64.length);
-    str += base64[rand];
+    res += base64[rand];
   }
-  return str;
+  return res;
 }
 
-// get safer random string
-export function getSafer(length: number = 16): string {
-  let result: string = "";
+// get uuid by pseudo-random generator
+export function uuid(length: number = 21): string {
+  let res: string = "";
   const random: Uint8Array =
-    typeof window !== "undefined"
+    typeof window === "object"
       ? window.crypto.getRandomValues(new Uint8Array(length))
       : randomBytes(length);
 
   while (0 < length--) {
-    result += base64[random[length] & 0x3f];
+    res += base64[random[length] & 0x3f];
   }
-  return result;
+  return res;
 }

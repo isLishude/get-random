@@ -15,29 +15,25 @@
 
 ```js
 // ES6
-import { getNum, getStr, getSafer } from 'random.ts'
 import * as Random from 'random.ts'
 // Node
 var Random = require('random.ts')
 
 // get random number of given range
 // this is equal with getNum(100, 2)
-Random.getNum(2, 100)
+Random.number(2, 100)
 
 // if param is not number type always return 0
-Random.getNum("string", "string")
+Random.number("string", "string")
 
 // if param out of safe range always return 0
-Random.getNum(0, 2 ** 53)
+Random.number(0, 2 ** 53)
 
 // get random string,default length is 6
-Random.getStr(6)
+Random.string(6)
 
-// get safer random string, default length is 16
-// v1.3.0 only supports node.js
-// after v1.3.0 supports ES6 browser(using ArrayBuffer and window.crypto)
-// for better compatibility in favor of getStr()
-Random.getSafer()
+// get uuid string, default length is 21
+Random.uuid()
 ```
 
 ## license

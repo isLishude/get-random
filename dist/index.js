@@ -2,7 +2,7 @@
  * get a random string or number of given range
  * @author isLishude
  * @license MIT
- * @version 1.4.0
+ * @version 2.0.0
  */
 (function (factory) {
     if (typeof module === "object" && typeof module.exports === "object") {
@@ -14,10 +14,10 @@
     }
 })(function (require, exports) {
     "use strict";
-    exports.__esModule = true;
+    Object.defineProperty(exports, "__esModule", { value: true });
     var crypto_1 = require("crypto");
     var base64 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
-    function getNum(min, max) {
+    function number(min, max) {
         if (typeof min !== "number" || typeof max !== "number") {
             return 0;
         }
@@ -29,28 +29,28 @@
             : Math.floor(Math.random() * (Math.abs(max - min) + 1)) +
                 Math.min(max, min);
     }
-    exports.getNum = getNum;
-    function getStr(length) {
+    exports.number = number;
+    function string(length) {
         if (length === void 0) { length = 6; }
-        var str = "";
+        var res = "";
         var i = 0;
         while (i++ < length) {
             var rand = Math.floor(Math.random() * base64.length);
-            str += base64[rand];
+            res += base64[rand];
         }
-        return str;
+        return res;
     }
-    exports.getStr = getStr;
-    function getSafer(length) {
-        if (length === void 0) { length = 16; }
-        var result = "";
-        var random = typeof window !== "undefined"
+    exports.string = string;
+    function uuid(length) {
+        if (length === void 0) { length = 21; }
+        var res = "";
+        var random = typeof window === "object"
             ? window.crypto.getRandomValues(new Uint8Array(length))
             : crypto_1.randomBytes(length);
         while (0 < length--) {
-            result += base64[random[length] & 0x3f];
+            res += base64[random[length] & 0x3f];
         }
-        return result;
+        return res;
     }
-    exports.getSafer = getSafer;
+    exports.uuid = uuid;
 });
