@@ -55,15 +55,4 @@ describe("get uuid", function() {
       .to.a("string")
       .that.have.lengthOf(8);
   });
-
-  it("if in browser use getRandomValues", function() {
-    const window = {
-      crypto: {
-        getRandomValues: require("crypto").randomBytes
-      }
-    };
-    expect(uuid())
-      .to.a("string")
-      .that.have.lengthOf(21);
-  });
 });
