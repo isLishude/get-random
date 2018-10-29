@@ -1,10 +1,10 @@
 <h1 align="center">random.ts</h1>
 
 <p align="center">
-    <a href="https://www.travis-ci.org/isLishude/random.ts"><img src="https://www.travis-ci.org/isLishude/random.ts.svg?branch=master" alt="ci"></a>
-    <a href="https://www.npmjs.com/package/random.ts"><img src="https://img.shields.io/npm/v/random.ts.svg" alt="Version"></a>
-    <a href="https://codecov.io/gh/isLishude/random.ts"><img src="https://codecov.io/gh/isLishude/random.ts/branch/master/graph/badge.svg" /></a>
-    <a href="https://github.com/isLishude/random.ts/issues"><img src="https://img.shields.io/github/issues/islishude/random.ts.svg" alt="issues"></a>
+    <a href="https://www.travis-ci.org/isLishude/random-ts"><img src="https://www.travis-ci.org/isLishude/random.ts.svg?branch=master" alt="ci"></a>
+    <a href="https://www.npmjs.com/package/random-ts"><img src="https://img.shields.io/npm/v/random.ts.svg" alt="Version"></a>
+    <a href="https://codecov.io/gh/isLishude/random-ts"><img src="https://codecov.io/gh/isLishude/random.ts/branch/master/graph/badge.svg" /></a>
+    <a href="https://github.com/isLishude/random-ts/issues"><img src="https://img.shields.io/github/issues/islishude/random.ts.svg" alt="issues"></a>
     <br/>
 </p>
 
